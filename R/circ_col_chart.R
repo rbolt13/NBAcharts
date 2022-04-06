@@ -1,6 +1,8 @@
 #' Circular Column Chart
 #'
 #' @import ggplot2
+#' @import stringr
+#' @import stats
 #'
 #' @description Create a circular column chart.
 #'
