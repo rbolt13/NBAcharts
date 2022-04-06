@@ -2,4 +2,3 @@
 
 export(circ_col_chart)
 import(ggplot2)
-import(knitr)
