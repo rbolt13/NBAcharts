@@ -30,6 +30,7 @@
 #' chart_subtitle <- c("This visualization is an example.")
 #' chart_source <- c("\n\n Source: Here \nLink to Data: here")
 #' cc_chart_filename <- c("example_plot.png")
+globalVariables(c("player", "data", "y"))
 circ_col_chart <- function(player_data,
                       col_pal,
                       chart_title,
