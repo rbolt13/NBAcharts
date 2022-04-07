@@ -39,3 +39,14 @@ plot
 <img src="example_plot.png" width="100%" />
 
 # Sources
+
+[R Packages](https://r-pkgs.org/index.html)
+
+[Circular barplot with R and
+ggplot2](https://r-graph-gallery.com/web-circular-barplot-with-R-and-ggplot2.html)
+
+# Added Links
+
+[How can I handle R CMD check “no visible binding for global variable”
+notes when my ggplot2 syntax is
+sensible?](https://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when)
