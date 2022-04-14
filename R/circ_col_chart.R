@@ -37,13 +37,37 @@
 #' @export
 #'
 #' @examples
-#' player_data <- data.frame(player = c("DA", "CP3", "CJ", "DB", "MB", "CP"),
-#'                        data = c(978, 942, 797, 1789, 1135, 613))
-#' col_pal <- c("#1D1160", "#813840", "#63727A", "#723010", "#000000", "#F9AD1B")
-#' chart_title <- c("Example Plot")
-#' chart_subtitle <- c("This visualization is an example.")
-#' chart_source <- c("\n\n Source: Here \nLink to Data: here")
-#' cc_chart_filename <- c("example_plot.png")
+#' player_data_01 <- data.frame(player = c("DA", "CP3", "CJ", "DB", "MB","CP"),
+#'                              data = c(978, 942, 797, 1789, 1135, 613))
+#' circ_col_chart(player_data = player_data_01,
+#'                ring_scale = 500,
+#'                ring_inner = 600,
+#'                ring_middle = 1100,
+#'                ring_outer = 1600,
+#'                ringlab_inner = "500",
+#'                ringlab_middle = "1000",
+#'                ringlab_outer = "1500",
+#'                col_pal = c("#1D1160", "#813840", "#63727A", "#723010", "#000000", "#F9AD1B"),
+#'                chart_title = c("Example Shot Plot"),
+#'                chart_subtitle = c("This visualization is an example."),
+#'                chart_source = c("\n\n Source: Here \nLink to Data: here"),
+#'                cc_chart_filename = c("example_plot_01.png"))
+#'
+#' player_data_02 <- data.frame(player = c("JM", "DA", "MB", "JC", "DB", "BB", "CP"),
+#'                              data = c(81, 40, 36, 30, 26, 26, 20))
+#' circ_col_chart(player_data = player_data_02,
+#'                ring_scale = 25,
+#'                ring_inner = 35,
+#'                ring_middle = 65,
+#'                ring_outer = 85,
+#'                ringlab_inner = "25",
+#'                ringlab_middle = "50",
+#'                ringlab_outer = "75",
+#'                col_pal = c("#1D1160", "#A24535", "#813840", "#63727A", "#723010", "#000000", "#F9AD1B"),
+#'                chart_title = c("Example Block Plot"),
+#'                chart_subtitle = c("This visualization is an example."),
+#'                chart_source = c("\n\n Source: Here \nLink to Data: here"),
+#'                cc_chart_filename = c("example_plot_02.png"))
 circ_col_chart <- function(player_data,
                            ring_scale,
                            ring_inner,
