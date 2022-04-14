@@ -39,7 +39,12 @@ circ_col_chart(player_data = player_data_01,
                        chart_title = c("Example Shot Plot"),
                        chart_subtitle = c("This visualization is an example."),
                        chart_source = c("\n\n Source: Here \nLink to Data: here"),
-                       cc_chart_filename = c("example_plot.png"))
+                       cc_chart_filename = c("example_plot_01.png"))
+```
+
+<img src="example_plot_01.png" width="100%" />
+
+``` r
 ## another example code
 player_data_02 <- data.frame(player = c("JM", "DA", "MB", "JC", "DB", "BB", "CP"),
                            data = c(81, 40, 36, 30, 26, 26, 20))
@@ -55,10 +60,10 @@ circ_col_chart(player_data = player_data_02,
                        chart_title = c("Example Block Plot"),
                        chart_subtitle = c("This visualization is an example."),
                        chart_source = c("\n\n Source: Here \nLink to Data: here"),
-                       cc_chart_filename = c("example_plot.png"))
+                       cc_chart_filename = c("example_plot_02.png"))
 ```
 
-<img src="example_plot.png" width="100%" />
+<img src="example_plot_02.png" width="100%" />
 
 # Sources
 
