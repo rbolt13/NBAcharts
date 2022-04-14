@@ -25,14 +25,21 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(NBAcharts)
 ## basic example code
-plot <- circ_col_chart(
-  player_data = data.frame(player = c("DA", "CP3", "CJ", "DB", "MB","CP"),
-                           data = c(978, 942, 797, 1789, 1135, 613)),
-  col_pal = c("#1D1160", "#813840", "#63727A", "#723010", "#000000", "#F9AD1B"),
-  chart_title = c("Example Plot"),
-  chart_subtitle = c("This visualization is an example."),
-  chart_source = c("\n\n Source: Here \nLink to Data: here"),
-  cc_chart_filename = c("example_plot.png"))
+Player_data <- data.frame(player = c("DA", "CP3", "CJ", "DB", "MB","CP"),
+                           data = c(978, 942, 797, 1789, 1135, 613))
+plot <- circ_col_chart(player_data = Player_data,
+                       ring_scale = 500, 
+                       ring_inner = 600,
+                       ring_middle = 1100,
+                       ring_outer = 1600,
+                       ringlab_inner = "500",
+                       ringlab_middle = "1000",
+                       ringlab_outer = "1500",
+                       col_pal = c("#1D1160", "#813840", "#63727A", "#723010", "#000000", "#F9AD1B"),
+                       chart_title = c("Example Plot"),
+                       chart_subtitle = c("This visualization is an example."),
+                       chart_source = c("\n\n Source: Here \nLink to Data: here"),
+                       cc_chart_filename = c("example_plot.png"))
 plot
 ```
 
