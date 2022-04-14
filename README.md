@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of NBAcharts is to create quick charts of NBA data.
+The goal of NBAcharts is to create quick charts of simple NBA stats.
 
 ## Installation
 
