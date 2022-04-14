@@ -24,7 +24,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(NBAcharts)
-## basic example code
+## basic example
 player_data_01 <- data.frame(player = c("DA", "CP3", "CJ", "DB", "MB","CP"),
                            data = c(978, 942, 797, 1789, 1135, 613))
 circ_col_chart(player_data = player_data_01,
@@ -45,7 +45,7 @@ circ_col_chart(player_data = player_data_01,
 <img src="example_plot_01.png" width="100%" />
 
 ``` r
-## another example code
+## another example
 player_data_02 <- data.frame(player = c("JM", "DA", "MB", "JC", "DB", "BB", "CP"),
                            data = c(81, 40, 36, 30, 26, 26, 20))
 circ_col_chart(player_data = player_data_02,
