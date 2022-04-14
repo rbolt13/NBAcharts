@@ -7,6 +7,20 @@
 #' @description Create a circular column chart.
 #'
 #' @param player_data a data frame with a player column and a data column.
+#' @param ring_scale a numeric value that represent the value the y axis
+#' is scaled by.
+#' @param ring_inner a numeric value that represents where the inner ring
+#' label will be placed on the graph.
+#' @param ring_middle a numeric value that represents where the middle ring
+#' label will be placed on the graph.
+#' @param ring_outer a numeric value that represents where the outer ring
+#' label will be placed on the graph.
+#' @param ringlab_inner a char value that represents the label of the
+#' inner ring.
+#' @param ringlab_middle a char value that represents the label of the
+#' middle ring.
+#' @param ringlab_outer a char value that represents the label of the
+#' outer ring.
 #' @param col_pal a color palette whose length is the same as the
 #'     number of players in the data set.
 #' @param chart_title is a char value that represents the title
@@ -31,11 +45,18 @@
 #' chart_source <- c("\n\n Source: Here \nLink to Data: here")
 #' cc_chart_filename <- c("example_plot.png")
 circ_col_chart <- function(player_data,
-                      col_pal,
-                      chart_title,
-                      chart_subtitle,
-                      chart_source,
-                      cc_chart_filename){
+                           ring_scale,
+                           ring_inner,
+                           ring_middle,
+                           ring_outer,
+                           ringlab_inner,
+                           ringlab_middle,
+                           ringlab_outer,
+                           col_pal,
+                           chart_title,
+                           chart_subtitle,
+                           chart_source,
+                           cc_chart_filename){
   # Radar Pts Plot
   pts_plot <- ggplot2::ggplot(player_data,
                               aes(x = reorder(str_wrap(player, 5), data),
@@ -44,7 +65,7 @@ circ_col_chart <- function(player_data,
     # Custom Panel Grid (500, 1000, 1500)
     geom_hline(
       aes(yintercept =y),
-      data.frame(y=c(0:3)*500),
+      data.frame(y=c(0:3)*ring_scale),
       color = "lightgrey"
     ) +
     geom_col(
@@ -56,22 +77,22 @@ circ_col_chart <- function(player_data,
     # Annotate custom scale inside plot
     annotate(
       x = 0,
-      y = 600,
-      label = "500",
+      y = ring_inner,
+      label = ringlab_inner,
       geom = "text",
       color = "gray12"
     ) +
     annotate(
       x = 0,
-      y = 1100,
-      label = "1000",
+      y = ring_middle,
+      label = ringlab_middle,
       geom = "text",
       color = "gray12"
     ) +
     annotate(
       x = 0,
-      y = 1600,
-      label = "1500",
+      y = ring_outer,
+      label = ringlab_outer,
       geom = "text",
       color = "gray12"
     ) +

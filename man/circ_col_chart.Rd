@@ -6,6 +6,13 @@
 \usage{
 circ_col_chart(
   player_data,
+  ring_scale,
+  ring_inner,
+  ring_middle,
+  ring_outer,
+  ringlab_inner,
+  ringlab_middle,
+  ringlab_outer,
   col_pal,
   chart_title,
   chart_subtitle,
@@ -15,6 +22,27 @@ circ_col_chart(
 }
 \arguments{
 \item{player_data}{a data frame with a player column and a data column.}
+
+\item{ring_scale}{a numeric value that represent the value the y axis
+is scaled by.}
+
+\item{ring_inner}{a numeric value that represents where the inner ring
+label will be placed on the graph.}
+
+\item{ring_middle}{a numeric value that represents where the middle ring
+label will be placed on the graph.}
+
+\item{ring_outer}{a numeric value that represents where the outer ring
+label will be placed on the graph.}
+
+\item{ringlab_inner}{a char value that represents the label of the
+inner ring.}
+
+\item{ringlab_middle}{a char value that represents the label of the
+middle ring.}
+
+\item{ringlab_outer}{a char value that represents the label of the
+outer ring.}
 
 \item{col_pal}{a color palette whose length is the same as the
 number of players in the data set.}
